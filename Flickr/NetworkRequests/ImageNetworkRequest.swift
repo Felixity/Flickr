@@ -37,8 +37,6 @@ class ImageNetworkRequest
         fullPath = fullPath.replacingOccurrences(of: perPageSubstring, with: "\(perPage)")
         fullPath = fullPath.replacingOccurrences(of: pageSubstring, with: "\(page)")
         
-        print(fullPath)
-        
         return fullPath
     }
  

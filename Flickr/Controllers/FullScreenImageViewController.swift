@@ -10,11 +10,14 @@ import UIKit
 
 class FullScreenImageViewController: UIViewController
 {
+    //MARK: - Outlets -
     @IBOutlet weak var largeImageView: UIImageView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
+    //MARK: - Public variables -
     var image: Image?
     
+    //MARK: - ViewController Life cyle Methods -
     override func viewDidLoad()
     {
         super.viewDidLoad()
