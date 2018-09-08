@@ -17,6 +17,7 @@
 		D3F0959621446D52006E6B7B /* ImageNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F0959521446D52006E6B7B /* ImageNetworkRequest.swift */; };
 		D3F0959921447AD7006E6B7B /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F0959721447AD7006E6B7B /* ImageCollectionViewCell.swift */; };
 		D3F0959A21447AD7006E6B7B /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3F0959821447AD7006E6B7B /* ImageCollectionViewCell.xib */; };
+		D3F0959C2144828B006E6B7B /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F0959B2144828B006E6B7B /* FullScreenImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D3F0959521446D52006E6B7B /* ImageNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNetworkRequest.swift; sourceTree = "<group>"; };
 		D3F0959721447AD7006E6B7B /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		D3F0959821447AD7006E6B7B /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		D3F0959B2144828B006E6B7B /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				D3F0957D214462AC006E6B7B /* GalleryViewController.swift */,
+				D3F0959B2144828B006E6B7B /* FullScreenImageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				D3F0959621446D52006E6B7B /* ImageNetworkRequest.swift in Sources */,
 				D3F0959321446A50006E6B7B /* SearchImageResponse.swift in Sources */,
 				D3F0957E214462AC006E6B7B /* GalleryViewController.swift in Sources */,
+				D3F0959C2144828B006E6B7B /* FullScreenImageViewController.swift in Sources */,
 				D3F0959121446A28006E6B7B /* Image.swift in Sources */,
 				D3F0957C214462AC006E6B7B /* AppDelegate.swift in Sources */,
 			);

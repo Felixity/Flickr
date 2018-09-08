@@ -67,6 +67,42 @@
             </objects>
             <point key="canvasLocation" x="623.20000000000005" y="-564.46776611694156"/>
         </scene>
+        <!--Full Screen Image View Controller-->
+        <scene sceneID="NOw-bC-sBj">
+            <objects>
+                <viewController storyboardIdentifier="FullScreenImageViewController" id="juf-8k-rSl" customClass="FullScreenImageViewController" customModule="Flickr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ezm-j8-2wk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nrr-wA-shA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="vlw-iq-67W">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nrr-wA-shA" firstAttribute="top" secondItem="Ezm-j8-2wk" secondAttribute="top" id="Gxl-zF-yXN"/>
+                            <constraint firstItem="Nrr-wA-shA" firstAttribute="bottom" secondItem="778-To-HJo" secondAttribute="bottom" id="TEx-ra-Nqw"/>
+                            <constraint firstItem="Nrr-wA-shA" firstAttribute="leading" secondItem="778-To-HJo" secondAttribute="leading" id="Xjv-VB-VeI"/>
+                            <constraint firstItem="vlw-iq-67W" firstAttribute="centerX" secondItem="Ezm-j8-2wk" secondAttribute="centerX" id="cur-mz-dtT"/>
+                            <constraint firstItem="vlw-iq-67W" firstAttribute="centerY" secondItem="Ezm-j8-2wk" secondAttribute="centerY" id="jVh-hH-2gD"/>
+                            <constraint firstItem="Nrr-wA-shA" firstAttribute="trailing" secondItem="778-To-HJo" secondAttribute="trailing" id="y3u-Hl-xdd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="778-To-HJo"/>
+                    </view>
+                    <connections>
+                        <outlet property="largeImageView" destination="Nrr-wA-shA" id="CLX-7U-WGP"/>
+                        <outlet property="spinner" destination="vlw-iq-67W" id="ZuC-L4-OHQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gmb-su-NtB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1373.5999999999999" y="-564.46776611694156"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tgu-fJ-fdD">
             <objects>

@@ -37,15 +37,16 @@ class ImageCollectionViewCell: UICollectionViewCell
                     
                     // create the url path for the small image
                     let imageURLString = "https://farm\(image.farm).staticflickr.com/\(image.server)/\(image.id)_\(image.secret)_q.jpg"
-                    let imageURL = URL(string: imageURLString)
-                    
-                    let urlContents = try? Data(contentsOf: imageURL!)
-                    if let imageData = urlContents
+                    if let imageURL = URL(string: imageURLString)
                     {
-                        // switch to main thread
-                        DispatchQueue.main.async
-                            {
-                                weakself.photoImageView.image = UIImage(data: imageData)
+                        let urlContents = try? Data(contentsOf: imageURL)
+                        if let imageData = urlContents
+                        {
+                            // switch to main thread
+                            DispatchQueue.main.async
+                                {
+                                    weakself.photoImageView.image = UIImage(data: imageData)
+                            }
                         }
                     }
             }

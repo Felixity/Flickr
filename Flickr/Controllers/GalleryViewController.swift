@@ -110,6 +110,15 @@ extension GalleryViewController: UICollectionViewDelegate
             self.loadImages()
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        if let fullScreenImageViewController = FullScreenImageViewController.loadFromNib() as FullScreenImageViewController?
+        {
+            fullScreenImageViewController.image = self.images[indexPath.row]
+            self.navigationController?.show(fullScreenImageViewController, sender: self)
+        }
+    }
 }
 
 //MARK: - UICollectionViewDataSource -
