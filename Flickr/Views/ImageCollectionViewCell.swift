@@ -28,27 +28,11 @@ class ImageCollectionViewCell: UICollectionViewCell
         // load new photo
         if let image = self.image
         {
-            // load photo in background
-            DispatchQueue.global(qos: .userInitiated).async
-                { [weak self] in
-                    
-                    guard let weakself = self else
-                    { return }
-                    
-                    // create the url path for the small image
-                    let imageURLString = "https://farm\(image.farm).staticflickr.com/\(image.server)/\(image.id)_\(image.secret)_q.jpg"
-                    if let imageURL = URL(string: imageURLString)
-                    {
-                        let urlContents = try? Data(contentsOf: imageURL)
-                        if let imageData = urlContents
-                        {
-                            // switch to main thread
-                            DispatchQueue.main.async
-                                {
-                                    weakself.photoImageView.image = UIImage(data: imageData)
-                            }
-                        }
-                    }
+            // create the url path for small image
+            let imageURLString = "https://farm\(image.farm).staticflickr.com/\(image.server)/\(image.id)_\(image.secret)_q.jpg"
+            if let url = URL(string: imageURLString)
+            {
+                self.photoImageView.loadImage(withURL: url)
             }
         }
     }

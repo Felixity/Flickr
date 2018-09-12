@@ -12,7 +12,6 @@ class FullScreenImageViewController: UIViewController
 {
     //MARK: - Outlets -
     @IBOutlet weak var largeImageView: UIImageView!
-    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     //MARK: - Public variables -
     var image: Image?
@@ -49,29 +48,11 @@ class FullScreenImageViewController: UIViewController
     {
         if let image = self.image
         {
-            self.spinner.startAnimating()
-            // load photo in background
-            DispatchQueue.global(qos: .userInitiated).async
-                { [weak self] in
-                    
-                    guard let weakself = self else
-                    { return }
-                    
-                    // create large image
-                    let imageURLString = "https://farm\(image.farm).staticflickr.com/\(image.server)/\(image.id)_\(image.secret)_b.jpg"
-                    if let imageURL = URL(string: imageURLString)
-                    {
-                        let urlContents = try? Data(contentsOf: imageURL)
-                        if let imageData = urlContents
-                        {
-                            // switch to main thread
-                            DispatchQueue.main.async
-                                {
-                                    weakself.spinner.stopAnimating()
-                                    weakself.largeImageView.image = UIImage(data: imageData)
-                            }
-                        }
-                    }
+            // create the url path for large image
+            let imageURLString = "https://farm\(image.farm).staticflickr.com/\(image.server)/\(image.id)_\(image.secret)_b.jpg"
+            if let url = URL(string: imageURLString)
+            {
+                self.largeImageView.loadImage(withURL: url)
             }
         }
     }

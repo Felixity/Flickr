@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3C78C2C2148B252004656C3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C78C2B2148B252004656C3 /* Utils.swift */; };
 		D3F0957C214462AC006E6B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F0957B214462AC006E6B7B /* AppDelegate.swift */; };
 		D3F0957E214462AC006E6B7B /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F0957D214462AC006E6B7B /* GalleryViewController.swift */; };
 		D3F09581214462AC006E6B7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F0957F214462AC006E6B7B /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D3C78C2B2148B252004656C3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D3F09578214462AC006E6B7B /* Flickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F0957B214462AC006E6B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3F0957D214462AC006E6B7B /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3C78C2A2148B231004656C3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D3C78C2B2148B252004656C3 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		D3F0956F214462AC006E6B7B = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		D3F0957A214462AC006E6B7B /* Flickr */ = {
 			isa = PBXGroup;
 			children = (
+				D3C78C2A2148B231004656C3 /* Utils */,
 				D3F0959421446D12006E6B7B /* NetworkRequests */,
 				D3F0958F21446795006E6B7B /* Controllers */,
 				D3F0958E2144678C006E6B7B /* Views */,
@@ -193,6 +204,7 @@
 				D3F0959C2144828B006E6B7B /* FullScreenImageViewController.swift in Sources */,
 				D3F0959121446A28006E6B7B /* Image.swift in Sources */,
 				D3F0957C214462AC006E6B7B /* AppDelegate.swift in Sources */,
+				D3C78C2C2148B252004656C3 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
