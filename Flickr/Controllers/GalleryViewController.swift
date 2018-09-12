@@ -50,6 +50,17 @@ extension GalleryViewController
     }
 }
 
+//MARK: - Helper Functions -
+extension GalleryViewController
+{
+    private func restartImageSearch()
+    {
+        self.images.removeAll()
+        self.collectionView.reloadData()
+        self.currentPage = 1
+    }
+}
+
 //MARK: - Network Request -
 extension GalleryViewController
 {
@@ -93,7 +104,17 @@ extension GalleryViewController: UISearchBarDelegate
         {
             self.searchText = searchText
             self.searchBar.endEditing(true)
+            
+            self.restartImageSearch()
             self.loadImages()
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
+    {
+        if searchText == ""
+        {
+            self.restartImageSearch()
         }
     }
 }
