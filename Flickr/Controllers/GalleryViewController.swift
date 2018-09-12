@@ -46,6 +46,13 @@ extension GalleryViewController
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
+        // setup spacing margins
+        let flow = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let space = (UIScreen.main.bounds.width - 300) / 3
+        flow.sectionInset = UIEdgeInsetsMake(space, space, space, space)
+        flow.minimumInteritemSpacing = space
+        flow.minimumLineSpacing = space
+        
         self.collectionView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
     }
 }
@@ -125,7 +132,7 @@ extension GalleryViewController: UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)
     {
         // infinite scroll through the search results
-        if (self.images.count - indexPath.row == self.perPage) && isMoreDataLoading
+        if (self.images.count - indexPath.row * 2 == 0) && isMoreDataLoading
         {
             self.currentPage += 1
             self.loadImages()

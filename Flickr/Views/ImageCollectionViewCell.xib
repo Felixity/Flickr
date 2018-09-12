@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eBi-f0-vsy">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eBi-f0-vsy">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="150" id="1be-3f-dzl"/>
@@ -35,11 +35,11 @@
                 <constraint firstItem="eBi-f0-vsy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mBV-fs-tWU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="141" height="237"/>
+            <size key="customSize" width="171" height="267"/>
             <connections>
                 <outlet property="photoImageView" destination="eBi-f0-vsy" id="9Ru-gY-i2g"/>
             </connections>
-            <point key="canvasLocation" x="79" y="131"/>
+            <point key="canvasLocation" x="94" y="146"/>
         </collectionViewCell>
     </objects>
 </document>
