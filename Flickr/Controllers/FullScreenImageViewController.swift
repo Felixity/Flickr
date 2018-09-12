@@ -46,11 +46,11 @@ class FullScreenImageViewController: UIViewController
     
     private func loadLargeImage()
     {
-        if let image = self.image
+        if let imageURL = self.image?.url
         {
             // create the url path for large image
-            let imageURLString = "https://farm\(image.farm).staticflickr.com/\(image.server)/\(image.id)_\(image.secret)_b.jpg"
-            if let url = URL(string: imageURLString)
+            let largeImageURLString = imageURL.absoluteString.replacingOccurrences(of: "_m.jpg", with: "_b.jpg")
+            if let url = URL(string: largeImageURLString)
             {
                 self.largeImageView.loadImage(withURL: url)
             }

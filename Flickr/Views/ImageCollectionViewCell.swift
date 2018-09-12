@@ -20,17 +20,20 @@ class ImageCollectionViewCell: UICollectionViewCell
         }
     }
     
+    override func prepareForReuse()
+    {
+        super.prepareForReuse()
+        self.photoImageView.image = nil
+    }
+    
     private func updateUI()
     {
-        // reset any existing informaiton
-        self.photoImageView.image = nil
-        
         // load new photo
-        if let image = self.image
+        if let imageURL = self.image?.url
         {
             // create the url path for small image
-            let imageURLString = "https://farm\(image.farm).staticflickr.com/\(image.server)/\(image.id)_\(image.secret)_q.jpg"
-            if let url = URL(string: imageURLString)
+            let smallImageURLString = imageURL.absoluteString.replacingOccurrences(of: "_m.jpg", with: "_q.jpg")
+            if let url = URL(string: smallImageURLString)
             {
                 self.photoImageView.loadImage(withURL: url)
             }
